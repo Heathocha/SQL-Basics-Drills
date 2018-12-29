@@ -12,5 +12,25 @@ Answer:  The hottest day was 134F in zip code 94063
 
 2.  Create a query to determine how many trips started at each station?
 
+SELECT
+	start_station,
+    COUNT(*) as trip_id
+FROM
+    trips
+GROUP by start_station;
+
 3.  Create a query to determine what the shortest trip that happened was.
 
+SELECT MIN (duration)
+
+FROM
+    trips
+    
+4.  Create a query to determin what the average trip duration was by end station.
+
+SELECT 
+	end_station,
+	AVG (duration)
+FROM
+    trips
+GROUP BY end_station;
